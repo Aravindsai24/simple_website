@@ -12,13 +12,13 @@ public class PostLoginController {
     @Autowired
     private UserDataRepository userDataRepository;
 
-    @PostMapping("/open")
+    @PostMapping("/display")
     public String openUrl(@ModelAttribute("userData") UserData userData) {
         String myURL = userData.getMyUrl();
         System.out.println(userData.getUserId());
         UserData createdUserData = userDataRepository.save(userData);
         System.out.println(createdUserData.getUserId());
         System.out.println(createdUserData.getMyUrl());
-        return "redirect:" + myURL;
+        return "displayUrl";
     }
 }

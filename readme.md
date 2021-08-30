@@ -25,7 +25,7 @@ It handles the register page (route `/register`)
 it takes the username and password of the new user and adds the details to `users` table in tha database.
 
 ## PostLoginController
-It takes the url from the user and maps the url with userID and pushes it to the `userData` table. Directs user to the given url.
+It takes the url from the user and maps the url with userID and pushes it to the `userData` table. Directs user to the third screen showing the entered url.
 
 # Models
  * User model is to store the user details such as username and password.

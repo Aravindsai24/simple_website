@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-    <title>POST LOGIN</title>
+    <title>User Input</title>
 </head>
 <body>
-<form onsubmit="return isValidURL()" action="#" th:action="@{/open}" method="post" th:object="${userData}">
+<form onsubmit="return isValidURL()" action="#" th:action="@{/display}" method="post" th:object="${userData}">
     <table>
         <tr>
             <td><label>Enter the URL</label></td>
