@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>POST LOGIN</title>
+</head>
+<body>
+<form action="#" th:action="@{/open}" method="post" th:object="${URL}">
+    <table>
+        <tr>
+            <td><label>Enter the URL</label></td>
+            <td><input type="text" th:field="*{myUrl}"></input></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"></input></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
