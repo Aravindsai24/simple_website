@@ -1,6 +1,6 @@
 package com.example.demo.controllers;
 
-import com.example.demo.models.Url;
+import com.example.demo.models.UserData;
 import com.example.demo.models.User;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +27,11 @@ public class LoginController {
     @PostMapping("/login")
     public String postLogin(Model model, @ModelAttribute("user") User user) {
         List<User> userList = usersRepository.findByUsernameAndPassword(user.getUsername(),user.getPassword());
-        model.addAttribute("URL", new Url());
         if(userList.size() > 0) {
             System.out.println(userList.get(0).getUsername());
-            System.out.println(userList.get(0).getPassword());
+            UserData userData = new UserData(userList.get(0).getId());
+            model.addAttribute("userData", userData);
+            System.out.println(userData.getUserId());
             return "postSuccesfulLogin";
         }
         return "preLogin";

@@ -4,11 +4,14 @@
     <title>POST LOGIN</title>
 </head>
 <body>
-<form action="#" th:action="@{/open}" method="post" th:object="${URL}">
+<form onsubmit="return isValidURL()" action="#" th:action="@{/open}" method="post" th:object="${userData}">
     <table>
         <tr>
             <td><label>Enter the URL</label></td>
-            <td><input type="text" th:field="*{myUrl}"></input></td>
+            <td><input type="text" id="URL" th:field="*{myUrl}"></input></td>
+        </tr>
+        <tr>
+            <td><input type="hidden" th:field="*{userId}" value="*{userId}"></input></td>
         </tr>
         <tr>
             <td></td>
@@ -16,5 +19,11 @@
         </tr>
     </table>
 </form>
+<script>
+    function isValidURL() {
+        var string = document.getElementById("URL");
+    };
+</script>
+
 </body>
 </html>

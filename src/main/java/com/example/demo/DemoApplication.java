@@ -5,8 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @SpringBootApplication
 @Controller
 public class DemoApplication {
@@ -19,6 +17,4 @@ public class DemoApplication {
 	public String entry() {
 		return "entry";
 	}
-
-
 }
