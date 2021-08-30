@@ -1,14 +1,6 @@
 package com.example.demo.models;
 
 public class Url {
-    public String getMyUrl() {
-        return myUrl;
-    }
-
-    public void setMyUrl(String myUrl) {
-        this.myUrl = myUrl;
-    }
-
     private String myUrl;
 
     public Url() {
@@ -19,5 +11,11 @@ public class Url {
         this.myUrl = str;
     }
 
+    public String getMyUrl() {
+        return myUrl;
+    }
 
+    public void setMyUrl(String myUrl) {
+        this.myUrl = myUrl;
+    }
 }
